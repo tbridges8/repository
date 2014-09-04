@@ -1,5 +1,5 @@
 package edu.gatech.oad.antlab.person;
-
+ import java.util.*;
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -30,8 +30,36 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
+            int index;
+            int count = 0;
+            int size = input.length();
+            int[] used = new int[size];
+            StringBuilder builder = new StringBuilder();
+            
+            while (count != size) {
+                boolean contains;
+                int random = (int)(Math.random() * (size-1));
+
+                if(count == 0){
+                    builder.append(input.charAt(random));
+                    count++;//add index to 
+                }
+                for(int i=0; i < count; i++) { 
+                    if(random!=used[i]){
+                        contains=false;
+                        index = i;
+                    }
+                }  
+                if(!contains) {
+                   builder.append(input.charAt(index));
+                   count++;
+                }
+            }
+                
+        
+        
 	  //Person 2 put your implementation here
-	  return null;
+	  return builder.toString();
 	}
 	/**
 	 * Return a string rep of this object
