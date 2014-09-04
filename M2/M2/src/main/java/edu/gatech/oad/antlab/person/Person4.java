@@ -35,7 +35,7 @@ public class Person4 {
       String newName = "";
       for (int i = 0; i < name.length(); i++){
           char  letter = name.charAt(i);
-          int aVal = (int) letter; 
+          int aVal = (int) letter;    
           
           char newLetter;
           newLetter = (char) (aVal +1);
