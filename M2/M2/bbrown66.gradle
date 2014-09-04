@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'base'
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+defaultTasks: 'myJar'
+
+sourceCompatibility = 1.8
+version = 1.0
+myJar {
+    manifest {
+        attributes 'Implementation-Title': 'bbrown66',
+                'Implementation-Version': version, 
+                'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                'Class-Path': '../../lib/resources.jar'
+    }
+    
+}
+

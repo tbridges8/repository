@@ -32,8 +32,8 @@ public class Person5 {
 	private String calc(String input) {
 	  //Person 5 put your implementation here
            int count = input.length();
-           String temp = input.substring((count - 2),(count));
-           String temp2 = input.substring(0, (count - 2));
+           String temp = input.substring(2,(count));
+           String temp2 = input.substring(0, 2);
            String input2 = temp + temp2;
 	  return input2;
 	}
