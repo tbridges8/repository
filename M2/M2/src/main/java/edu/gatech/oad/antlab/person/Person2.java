@@ -30,19 +30,19 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-            int index;
+            int index = 0;
             int count = 0;
             int size = input.length();
             int[] used = new int[size];
             StringBuilder builder = new StringBuilder();
-            
+            boolean contains = true;
             while (count != size) {
-                boolean contains;
+                //boolean contains;
                 int random = (int)(Math.random() * (size-1));
 
                 if(count == 0){
                     builder.append(input.charAt(random));
-                    count++;//add index to 
+                    count++; 
                 }
                 for(int i=0; i < count; i++) { 
                     if(random!=used[i]){
