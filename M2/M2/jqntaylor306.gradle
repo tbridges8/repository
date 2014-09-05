@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+defaultTasks 'jar'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+jar{
+    manifest {
+        attributes 'Implementation-Title': 'jtaylor306',
+                'Implementation-Version': version,
+                'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                'Class-Path': '../../lib/resources.jar'
+    }
+}
